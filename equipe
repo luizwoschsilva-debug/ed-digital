@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe | EcoViva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">🌿 EcoViva</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a class="ativo" href="equipe.html">Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sobre">
+        <div class="sobre-texto">
+            <h2>Sobre o autor</h2>
+            <p>Meu nome é Luiz.</p>
+            <p>Meu número é 43.</p>
+            <p>Vôlei: minha paixão, minha terapia.</p>
+            <p>Este site do Projeto Agrinho foi criado por Luiz.</p>
+        </div>
+        <div class="sobre-foto">
+            <img src="IMG_20260330_110824.jpg" alt="Foto de Luiz">
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">🌿 EcoViva</div>
+        <p class="creditos">Criado por Luiz</p>
+    </footer>
+</body>
+
+</html>

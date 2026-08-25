@@ -1,8 +1,136 @@
-.foto{
-    width:54%
+/* ===== Reset básico ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:'Segoe UI',Arial,sans-serif;
+    color:#1f3a24;
+    line-height:1.6;
+    background:#fff;
+}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* ===== Cores reutilizáveis ===== */
+:root{
+    --verde-escuro:#173d1f;
+    --verde:#2f6b3a;
+    --verde-claro:#e9f3e9;
+    --texto:#1f3a24;
+    --branco:#ffffff;
 }
 
-body{
-    background-color: blue;
-    display: flex;
+/* ===== Cabeçalho ===== */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--verde-escuro);
+    color:var(--branco);
+    padding:18px 50px;
+}
+.logo{font-size:20px;font-weight:700}
+nav ul{display:flex;gap:28px}
+nav a{font-size:14px}
+nav a.ativo{border-bottom:2px solid var(--branco);padding-bottom:4px}
+
+/* ===== Hero ===== */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(to right, var(--verde-claro) 45%, transparent 45%),
+               url('IMG_20260330_110824.jpg') right center/cover no-repeat;
+    padding:80px 50px;
+    gap:30px;
+}
+.hero-texto{max-width:480px}
+.hero-texto h1{font-size:40px;color:var(--verde-escuro);margin-bottom:20px}
+.hero-texto p{font-size:15px;margin-bottom:24px;color:#3a4a3d}
+.btn{
+    display:inline-block;
+    background:var(--verde-escuro);
+    color:var(--branco);
+    padding:12px 22px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+/* ===== Seção de 3 colunas ===== */
+.pilares{
+    display:flex;
+    text-align:center;
+    padding:60px 50px;
+}
+.pilares div{flex:1;padding:0 20px;border-left:1px solid #ddd}
+.pilares div:first-child{border-left:none}
+.pilares h3{margin:14px 0 10px;color:var(--verde-escuro)}
+.pilares p{font-size:14px;color:#4a4a4a}
+.icone{font-size:32px}
+
+/* ===== Ações que fazem a diferença ===== */
+.acoes{
+    text-align:center;
+    padding:50px 50px 70px;
+}
+.acoes .eyebrow{
+    color:var(--verde);
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+.acoes h2{font-size:26px;color:var(--verde-escuro);margin-bottom:30px}
+.lista-acoes{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.lista-acoes div{width:110px}
+.lista-acoes .icone{font-size:28px}
+.lista-acoes p{font-size:13px;margin-top:8px}
+
+/* ===== Sobre o projeto ===== */
+.sobre{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:var(--verde-claro);
+    padding:60px 50px;
+}
+.sobre-texto{flex:1}
+.sobre-texto h2{color:var(--verde-escuro);margin-bottom:14px}
+.sobre-texto p{font-size:14px;color:#3a4a3d;margin-bottom:20px}
+.sobre-foto{flex:1}
+.sobre-foto img{width:100%;border-radius:10px;display:block}
+
+/* ===== Citação ===== */
+.citacao{
+    background:var(--verde-escuro);
+    color:var(--branco);
+    text-align:center;
+    padding:70px 50px;
+}
+.citacao h2{font-size:26px;max-width:600px;margin:0 auto 14px}
+.citacao span{color:#8fd39a}
+.citacao p{font-size:14px;color:#cfe3d1}
+
+/* ===== Rodapé ===== */
+footer{
+    background:var(--verde-escuro);
+    color:var(--branco);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    font-size:13px;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+footer .creditos{color:#a8d1ac}
+
+/* ===== Responsivo ===== */
+@media(max-width:800px){
+    header,.hero,.pilares,.sobre,footer{flex-direction:column;padding:30px 20px;gap:20px}
+    .hero{background:var(--verde-claro)}
+    .pilares div{border-left:none;border-top:1px solid #ddd;padding-top:20px}
+    .lista-acoes{gap:24px}
 }
